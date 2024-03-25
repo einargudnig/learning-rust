@@ -9,6 +9,7 @@ fn main() {
 
     println!("The secret number is: {secret_number}");
 
+    loop {
     println!("Please input your guess.");
 
     let mut guess = String::new();
@@ -23,15 +24,14 @@ fn main() {
     };
 
     println!("You guessed: {guess}");
-    
-    loop {
+
         match guess.cmp(&secret_number) {
             Ordering::Less => println!("Too small!"),
             Ordering::Greater => println!("Too big!"),
             Ordering::Equal => {
                 println!("You win!");
                 break;
-            },
+            }
         }
     }
 }

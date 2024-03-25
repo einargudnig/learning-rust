@@ -1,10 +1,11 @@
 fn main() {
-    let x = 5;
-    let x = x + 1;
+ 
+    let tup = (500, 6.4, 1);
 
-    {
-        let x = x * 2;
-        println!("The value of x in the inner scope is: {x}");
-    }
-    println!("The value of x is: {x}");
+    let (_x, _y, _z) = tup;
+
+    // let a = [1, 2, 3, 4, 5];
+
+    println!("The value of y is: {_y}");
+    // println!("The value of y is: {a}");
 }
